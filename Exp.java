@@ -11,7 +11,7 @@ public class Exp {
 	public String rValue, lValue;
 	public String op;
 	public LinkedList<Exp> children;
-	//public boolean hasConditions, hasDependents;
+	public boolean hasConditions, hasDependents;
 	
 	public Map<String, String> depMap = new HashMap<String, String>();
 	public String expCondStr = "";
@@ -26,6 +26,15 @@ public class Exp {
 		type=null;
 		lValue = rValue = op = null;
 		children=new LinkedList<Exp>();
-		//hasConditions = hasDependents = false;
+		hasConditions = hasDependents = false;
+	}
+	
+	public boolean hasChild(String lValue){
+		for (Exp child : children){
+			if(!child.type.equals(Exp.Type.LOGICAL_TYPE) && child.lValue.equals(lValue)){
+				return true;
+			}
+		}
+		return false;
 	}
 }

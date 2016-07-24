@@ -14,16 +14,16 @@ public class ExpTree {
 		//String exp = "	($Focus:bug_domain2gbst_elm:title!='Please Specify' and $Focus:bug_product2part_info:part_info2part_num:family!='Foundation Management' or ($Focus:bug_product2part_info:part_info2part_num:family = 'Foundation Management') )and ($Focus:bug_product2part_info:part_info2part_num:family = 'Billing' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='' and x_main_component_changes!='' and x_xpi_topology_changes!='' and (x_perforce_id!='' or x_perforce_id_man!='') and ((x_roll_down_ind != '' and x_roll_down_ind != 'Please Specify' and (reason!='Release Rollup' and reason!='Release Rollup Sub Task' and reason!='Rollup' and reason!='Rollup Sub Task'))or (reason='Release Rollup' or reason='Release Rollup Sub Task' or reason='Rollup' or reason='Rollup Sub Task'))or ($Focus:bug_product2part_info:part_info2part_num:family = 'Ordering' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'DES' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Product Catalogue' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Customer Hub' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or (($Focus:bug_product2part_info:part_info2part_num:family = 'Content RM' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS ARM & Planning' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS Activation' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS DIM' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS Network Rollout Solutions' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS Foundation' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'OSS Service Fulfillment')  and release_rev !='' and release_rev !='Please Specify' and x_act_patch_bundle != '' and x_act_patch_bundle != 'Please Specify') or $Focus:bug_product2part_info:part_info2part_num:family != 'Billing' and $Focus:bug_product2part_info:part_info2part_num:family != 'Ordering' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Product Catalogue' and $Focus:bug_product2part_info:part_info2part_num:family != 'Content RM' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Customer Hub' and $Focus:bug_product2part_info:part_info2part_num:family != 'DES' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS ARM & Planning' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Activation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS DIM' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Network Rollout Solutions' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Foundation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Service Fulfillment')";
 		//String exp = "($Focus:bug_product2part_info:part_info2part_num:family = 'Ordering' or 	$Focus:bug_product2part_info:part_info2part_num:family = 'Billing') and (release_rev!='') and (release_rev!='Please Specify') ";
 		//String exp = "y!='Please Specify' and ((x!='' and family='Ordeing') or x_what='WHAT123')";
-		//String exp = "(x!='' and z='1') or (x!='' and y='2')";
+		String exp = "(x!='' and z='1') or (x!='' and y='2')";
 		//String exp = "x!='' or y!='' or (z!='' and k='6') or (w!='' and a='2')";
 		//String exp = "(' Ordering' = $Focus:bug_product2part_info:part_info2part_num:family  or $Focus:bug_product2part_info:part_info2part_num:family = 'Billing') and (1>=count($Focus:x_bug2target_comp:objid)) and (x_nominated_rel!='') and (x_nominated_rel!='Please Specify') and (((reason='Hot Fix' or reason='Patch Bundle' or reason='Hot Fix Sub Task' or reason='Patch Bundle Sub Task' or reason='Rollup' or reason='Rollup Sub Task') and x_pl_patch_bundle != '' and x_pl_patch_bundle != 'Please Specify') or (reason!='Hot Fix' and reason!='Patch Bundle' and reason!='Hot Fix Sub Task' and reason!='Patch Bundle Sub Task' and reason!='Rollup' and reason!='Rollup Sub Task')) or ($Focus:bug_product2part_info:part_info2part_num:family != 'Ordering' and $Focus:bug_product2part_info:part_info2part_num:family != 'Billing')";
-		String exp = "x_related_cr<>null";
+		//String exp = "not not(x_related_cr!=null)";
 		//String exp ="(x_instructions != '' and $Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Product Catalogue' or ($Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Product Catalogue')) and ($Focus:bug_domain2gbst_elm:title!='Please Specify' and $Focus:bug_product2part_info:part_info2part_num:family!='Foundation Management' or ($Focus:bug_product2part_info:part_info2part_num:family = 'Foundation Management') ) and ($Focus:bug_product2part_info:part_info2part_num:family = 'Billing' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='' and x_main_component_changes!='' and  x_xpi_topology_changes!='' and (x_perforce_id!='' or x_perforce_id_man!='') and ((x_roll_down_ind != '' and x_roll_down_ind != 'Please Specify' and (reason!='Release Rollup' and reason!='Release Rollup Sub Task' and reason!='Rollup' and reason!='Rollup Sub Task')) or (reason='Release Rollup' or reason='Release Rollup Sub Task' or reason='Rollup' or reason='Rollup Sub Task'))or ($Focus:bug_product2part_info:part_info2part_num:family = 'Ordering' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'DES' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Product Catalogue' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Customer Hub' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or (($Focus:bug_product2part_info:part_info2part_num:family = 'Content RM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS ARM & Planning' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Activation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS DIM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Network Rollout Solutions' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Foundation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Service Fulfillment')  and release_rev !='' and release_rev !='Please Specify' and x_act_patch_bundle != '' and x_act_patch_bundle != 'Please Specify') or $Focus:bug_product2part_info:part_info2part_num:family != 'Billing' and $Focus:bug_product2part_info:part_info2part_num:family != 'Ordering' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Product Catalogue' and $Focus:bug_product2part_info:part_info2part_num:family != 'Content RM' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Customer Hub' and $Focus:bug_product2part_info:part_info2part_num:family != 'DES' and$Focus:bug_product2part_info:part_info2part_num:family != 'OSS ARM & Planning' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Activation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS DIM' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Network Rollout Solutions' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Foundation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Service Fulfillment')";
 		
 		//SPECIAL BELOW
 		//String exp = "release_rev<>'' and x_fixed_patch!='' and not(x_mandatory_act contains 'Component Testing Approval' or x_mandatory_act contains 'Implementation Changes' or x_mandatory_act contains 'Recommendation to Other Accounts' or x_mandatory_act contains 'Rollup Creation')";
 		
-	//	String exp = "($Focus:bug_domain2gbst_elm:title!='Please Specify' and $Focus:bug_product2part_info:part_info2part_num:family!='Foundation Management' or ($Focus:bug_product2part_info:part_info2part_num:family = 'Foundation Management') ) and ($Focus:bug_product2part_info:part_info2part_num:family = 'Billing' and x_rev_rating!='' and x_rev_rating!='Please Specify' and x_source!='' and x_source!='Please Specify' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='' and x_main_component_changes!='' and  x_xpi_topology_changes!='' and (x_perforce_id!='' or x_perforce_id_man!='') and ((x_roll_down_ind != '' and x_roll_down_ind != 'Please Specify' and (reason!='Release Rollup' and reason!='Release Rollup Sub Task' and reason!='Rollup' and reason!='Rollup Sub Task')) or (reason='Release Rollup' or reason='Release Rollup Sub Task' or reason='Rollup' or reason='Rollup Sub Task')) )  or ($Focus:bug_product2part_info:part_info2part_num:family = 'Ordering' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'DES' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or  ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Product Catalogue' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Customer Hub' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'AMSS' and x_what_problem!='' and x_what_problem!='Please Specify' and x_why_problem_happened!='' and x_why_problem_happened!='Please Specify' and x_when_problem_found!='' and x_when_problem_found!='Please Specify')or (($Focus:bug_product2part_info:part_info2part_num:family = 'Content RM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS ARM & Planning' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Activation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS DIM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Network Rollout Solutions' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Foundation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Service Fulfillment')  and release_rev !='' and release_rev !='Please Specify' and x_act_patch_bundle != '' and x_act_patch_bundle != 'Please Specify') or ($Focus:bug_product2part_info:part_info2part_num:family != 'Billing' and $Focus:bug_product2part_info:part_info2part_num:family != 'Ordering' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Product Catalogue' and $Focus:bug_product2part_info:part_info2part_num:family != 'Content RM' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Customer Hub' and $Focus:bug_product2part_info:part_info2part_num:family != 'DES' and $Focus:bug_product2part_info:part_info2part_num:family != 'AMSS' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS ARM & Planning' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Activation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS DIM' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Network Rollout Solutions' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Foundation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Service Fulfillment')";
+		//String exp = "($Focus:bug_domain2gbst_elm:title!='Please Specify' and $Focus:bug_product2part_info:part_info2part_num:family!='Foundation Management' or ($Focus:bug_product2part_info:part_info2part_num:family = 'Foundation Management') ) and($Focus:bug_product2part_info:part_info2part_num:family = 'Billing' and x_rev_rating!='' and x_rev_rating!='Please Specify' and x_source!='' and x_source!='Please Specify' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='' and x_main_component_changes!='' and  x_xpi_topology_changes!='' and (x_perforce_id!='' or x_perforce_id_man!='') and ((x_roll_down_ind != '' and x_roll_down_ind != 'Please Specify' and (reason!='Release Rollup' and reason!='Release Rollup Sub Task' and reason!='Rollup' and reason!='Rollup Sub Task')) or (reason='Release Rollup' or reason='Release Rollup Sub Task' or reason='Rollup' or reason='Rollup Sub Task')) )  or ($Focus:bug_product2part_info:part_info2part_num:family = 'Ordering' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'DES' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or  ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Product Catalogue' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='') or ($Focus:bug_product2part_info:part_info2part_num:family = 'Enterprise Customer Hub' and x_fix_src_files!='' and x_instructions!=''and x_fix_tgt_files!='' and x_correction_desc!='' and x_prob_desc!='')or ($Focus:bug_product2part_info:part_info2part_num:family = 'AMSS' and x_what_problem!='' and x_what_problem!='Please Specify' and x_why_problem_happened!='' and x_why_problem_happened!='Please Specify' and x_when_problem_found!='' and x_when_problem_found!='Please Specify')or (($Focus:bug_product2part_info:part_info2part_num:family = 'Content RM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS ARM & Planning' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Activation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS DIM' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Network Rollout Solutions' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Foundation' or $Focus:bug_product2part_info:part_info2part_num:family = 'OSS Service Fulfillment')  and release_rev !='' and release_rev !='Please Specify' and x_act_patch_bundle != '' and x_act_patch_bundle != 'Please Specify') or ($Focus:bug_product2part_info:part_info2part_num:family != 'Billing' and $Focus:bug_product2part_info:part_info2part_num:family != 'Ordering' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Product Catalogue' and $Focus:bug_product2part_info:part_info2part_num:family != 'Content RM' and $Focus:bug_product2part_info:part_info2part_num:family != 'Enterprise Customer Hub' and $Focus:bug_product2part_info:part_info2part_num:family != 'DES' and $Focus:bug_product2part_info:part_info2part_num:family != 'AMSS' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS ARM & Planning' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Activation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS DIM' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Network Rollout Solutions' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Foundation' and $Focus:bug_product2part_info:part_info2part_num:family != 'OSS Service Fulfillment')";
 		
 		System.out.println("Expression:\n\t"+exp);
 		System.out.print("Creating Tree..\n");
@@ -164,7 +164,7 @@ public class ExpTree {
 	}
 
 	private static void updateCondforDep(String depKey, Exp node){
-		if(!node.expCondStr.equals("") && node.op.equals(OP.AND)){ //added second part of && - node.op.equals(OP.AND)  12.7.16
+		if(!node.expCondStr.equals("") && node.op.equals(OP.AND)){ 
 			if(node.depMap.containsKey(depKey) && !node.depMap.get(depKey).equals("")){
 				node.depMap.put(depKey, "(" + node.depMap.get(depKey) + ") " + node.op + " "+ node.expCondStr);
 			}else{
@@ -185,7 +185,7 @@ public class ExpTree {
 						cond_value += child.value + " " + node.op + " " ; //child.value should bring the full expression of the node
 				}
 			}
-			cond_value=cond_value.substring(0,cond_value.length()-node.op.length()-2)+")";
+			cond_value=cond_value.substring(0,cond_value.length()-node.op.length()-2)+")"; //remove last unnecessary 'node.op' from cond_value and close with ')'
 			if(!node.depMap.get(depKey).equals("")) 
 				cond_value = cond_value + " " + "and" + " " + node.depMap.get(depKey);
 			node.depMap.put(depKey,cond_value);
@@ -209,54 +209,61 @@ public class ExpTree {
 				System.out.print('\t');
 			System.out.println("</"+node.value+">");
 		}else{
-			System.out.println("<"+node.type + " value=\"" + node.value +"\"></"+node.type+">"); //"'1'"
+			System.out.println("<"+node.type + " value=\"" + node.value +"\"></"+node.type+">"); 
 		}
 	}
 
 	private static Exp createTree(String exp) {
 		
-		//int notLvl = 0;
+		boolean found_NOT_or_OPENPAR;
+		int notLvl = 0;
 		
 		expLen = exp.length();
 		
 		Exp curNode = null ;//= root; //current node working on
 		
 		while(curExpStrPos<expLen){
-			
-			//get NOT , NOT(
-			/*if(exp.startsWith("not ", curExpStrPos) || exp.startsWith("not(", curExpStrPos)){
-				notLvl++;
-			}*/
-			//skip ' ' , '\t'
-			skipWhiteSpaces(exp);
-			
-			// '('
-			while(curExpStrPos<expLen && exp.charAt(curExpStrPos)=='('){
-				//System.out.println("found '(' at: " + curExpStrPos);
-				curExpStrPos++;
-
-				//Create a new OPEN_PARENTHESIS node
-				Exp parenthesisNode = new Exp();
-				parenthesisNode.value = "(";
-				parenthesisNode.type = Exp.Type.OPEN_PARENTHESIS;
-
-				if(curNode!=null){
-					//curNode must be AND/OR here
-					curNode.children.add(parenthesisNode);
-					parenthesisNode.parent = curNode;
-				}
-
-				curNode = parenthesisNode;
+			do{
+				found_NOT_or_OPENPAR = false;
 				skipWhiteSpaces(exp);
-			}
-
+				//get NOT , NOT(
+				if(exp.startsWith("not ", curExpStrPos) || exp.startsWith("not(", curExpStrPos)){
+					found_NOT_or_OPENPAR = true;
+					notLvl++;
+					curExpStrPos+="not".length();
+				}
+				//skip ' ' , '\t'
+				skipWhiteSpaces(exp);
+				
+				// '('
+				while(curExpStrPos<expLen && exp.charAt(curExpStrPos)=='('){
+					found_NOT_or_OPENPAR= true;
+					//System.out.println("found '(' at: " + curExpStrPos);
+					curExpStrPos++;
+	
+					//Create a new OPEN_PARENTHESIS node
+					Exp parenthesisNode = new Exp();
+					parenthesisNode.value = "(";
+					parenthesisNode.type = Exp.Type.OPEN_PARENTHESIS;
+	
+					if(curNode!=null){
+						//curNode must be AND/OR here
+						curNode.children.add(parenthesisNode);
+						parenthesisNode.parent = curNode;
+					}
+	
+					curNode = parenthesisNode;
+					skipWhiteSpaces(exp);
+				}
+			}while(found_NOT_or_OPENPAR);
+			
 			if(curExpStrPos+1>=expLen) break; //end of expression
 			//get left value, op ('=', '!=') , right value
 			int opIndex = getOpIndex(exp);
 			String lv = getLeftValue(exp, opIndex).trim(); 	//remove spaces at end. was without trim()
 			//System.out.println("lv: " + lv);
 			//System.out.println("opIndex: " + opIndex + ", exp.charAt("+opIndex+")="+exp.charAt(opIndex));
-			String op = getOp(exp).trim();					//was without trim()
+			String op = getOp(exp, notLvl).trim();					//was without trim()
 			//System.out.println("op: " + op);
 			String rv = getRightValue(exp).trim();			//was without trim()
 			//System.out.println("rv: " + rv);
@@ -270,6 +277,9 @@ public class ExpTree {
 			//check for ')'
 			skipWhiteSpaces(exp);
 			while(curExpStrPos<expLen && exp.charAt(curExpStrPos)==')'){
+				if(notLvl>0){
+					notLvl--;
+				}
 				//System.out.println("found ')' at: " + curExpStrPos);
 				curExpStrPos++;
 				// go to first '(' parent
@@ -300,7 +310,7 @@ public class ExpTree {
 			//get logical op ('AND','OR')
 			if(curExpStrPos>=expLen) break;	//End.Of.String - logical op doesnt have to appear..
 			String logicalOp = getLogicalOp(exp);
-			//System.out.println("logicalOp: " + logicalOp);
+			System.out.println("logicalOp: " + logicalOp);
 
 			if(logicalOp!=null){
 				//create this Logical node
@@ -366,7 +376,7 @@ public class ExpTree {
 	private static Exp createNode(String rv, String lv, String op, Exp curNode) {
 		Exp newNode = new Exp();
 		
-		//check if lv is not a var
+		//put in lv the var, and in rv the value
 		if(		lv.startsWith("\'") 						|| 
 				(lv.charAt(0)>='0' && lv.charAt(0)<='9') 	||
 				lv.equalsIgnoreCase("null")					
@@ -379,7 +389,7 @@ public class ExpTree {
 		newNode.lValue = lv; newNode.op=op; newNode.rValue = rv;
 		//System.out.println("lv: " + lv + ", op: " + op + " ,rv: " + rv);
 		//System.out.println("lv: " + lv +"\n" + "op: " + op + "\n" + "rv: " + rv);
-		newNode.value = lv+op+rv;
+		newNode.value = lv+" " + op+ " "+rv;
 		newNode.type = getExpType(newNode.rValue, newNode.lValue, newNode.op);
 		//System.out.println("Type of: " + newNode.value + " is " + newNode.type);
 		newNode.parent = curNode;
@@ -391,10 +401,10 @@ public class ExpTree {
 	private static String getLogicalOp(String exp) {
 		skipWhiteSpaces(exp);
 
-		if(exp.startsWith(OP.AND+" ", curExpStrPos)) {
+		if(exp.startsWith(OP.AND+" ", curExpStrPos) || exp.startsWith(OP.AND+"(", curExpStrPos)) {
 			curExpStrPos+=OP.AND.length() ;return OP.AND;
 		}
-		if(exp.startsWith(OP.OR+" ", curExpStrPos)) {
+		if(exp.startsWith(OP.OR+" ", curExpStrPos) || exp.startsWith(OP.OR+"(", curExpStrPos)) {
 			curExpStrPos+=OP.OR.length(); return OP.OR;
 		}
 
@@ -456,42 +466,73 @@ public class ExpTree {
 		return counter;
 	}
 
-	private static String getOp(String exp) {
+	private static String getOp(String exp, int notLvl) {
 		skipWhiteSpaces(exp);
 
 		if(exp.startsWith(OP.NEQ, curExpStrPos)){
 			curExpStrPos+=OP.NEQ.length();
-			return OP.NEQ;
+			if(notLvl%2==1){
+				return OP.EQ;
+			}else{
+				return OP.NEQ;
+			}
 		}
 		else if(exp.startsWith(OP.EQ, curExpStrPos)){
 			curExpStrPos+=OP.EQ.length();
-			return OP.EQ;
+			if(notLvl%2==1){
+				return OP.NEQ;
+			}else{
+				return OP.EQ;
+			}
 		}
 		else if(exp.startsWith(OP.DIFF, curExpStrPos)){
 			curExpStrPos+=OP.DIFF.length();
-			return OP.DIFF;
+			if(notLvl%2==1){
+				return OP.EQ;
+			}else{
+				return OP.DIFF;
+			}
 		}
 		else if(exp.startsWith(OP.GTE, curExpStrPos)){
 			curExpStrPos+=OP.GTE.length();
-			return OP.GTE;
+			if(notLvl%2==1){
+				return OP.LT;
+			}else{
+				return OP.GTE;
+			}
 		}
 		else if(exp.startsWith(OP.GT, curExpStrPos)){
 			curExpStrPos+=OP.GT.length();
-			return OP.GT;
+			if(notLvl%2==1){
+				return OP.LTE;
+			}else{
+				return OP.GT;
+			}
 		}
 		else if(exp.startsWith(OP.LTE, curExpStrPos)){
 			curExpStrPos+=OP.LTE.length();
-			return OP.LTE;
+			if(notLvl%2==1){
+				return OP.GT;
+			}else{
+				return OP.LTE;
+			}
 		}
 		else if(exp.startsWith(OP.LT, curExpStrPos)){
 			curExpStrPos+=OP.LT.length();
-			return OP.LT;
+			if(notLvl%2==1){
+				return OP.GTE;
+			}else{
+				return OP.LT;
+			}
 		}
 		else if(exp.startsWith(OP.CONTAINS, curExpStrPos)){
 			curExpStrPos+=OP.CONTAINS.length();
-			return OP.CONTAINS;
+			if(notLvl%2==1){
+				return "not " + OP.CONTAINS;
+			}else{
+				return OP.CONTAINS;
+			}
 		}
-
 
 		// should never reach here
 		return null;
@@ -519,8 +560,6 @@ public class ExpTree {
 				min=index;
 			}
 		}
-		
-		//System.out.println("exp.charAt("+min+")="+exp.charAt(min));
 		
 		if(exp.charAt(min-1)=='!' || exp.charAt(min-1)=='<' || exp.charAt(min-1)=='>'){
 			min--;
@@ -564,5 +603,4 @@ public class ExpTree {
  * To do list:
  * 1. allow left side of exp to be value and not variable - DONE
  * 2. get expression of LOGICAL node - PENDING
- * 3. 'and(' - Exception
  */
